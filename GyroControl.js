@@ -14,7 +14,7 @@ if (window.DeviceOrientationEvent) {
 
 function ObjectMove(LR, FB, DIR){
 	var ball = document.getElementById("ballControll");
-	document.getElementById("ballControll").style.transform = "rotate("+ LR +"deg) rotate3d(1,0,0, "+ (FB*-1)+"deg)";
+	document.getElementById("ballControll").style.webkitTransform = "rotate("+ FB +"deg)";
 };
 
 

@@ -3,23 +3,31 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>RC Controller</title>
+        <title>RC Stats Update</title>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <link href="RCInterfaceLayout.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="GyroControl.js"></script>
     </head>
     <body>
-
-        <h1 id="iPhone Display">RC Controller</h1>
-        <div id="ballControll"></div>
-        <br>
-        <div id="StatOutputContainer">
+        <div id="StatUpdateTitle">
+            <h1>RC Controller Stats Update Screen</h1>
+            <br>
+            <div id="StatControlContainer">
+            <div id="alphaStat" class="graph"></div>
+            <div id="betaStat" class="graph"></div>
+            <div id="gammaStat" class="graph"></div>
+            </div>
+                    <div id="StatOutputContainer">
             <div id="stats">
                 <p id="alpha">Alpha:</p>
                 <p id="beta">Beta:</p>
                 <p id="gamma">Gamma:</p>
             </div>
         </div>
+        </div>
+        <br>
+
+
         
     </body>
 </html>
