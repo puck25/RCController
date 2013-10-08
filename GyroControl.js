@@ -24,6 +24,8 @@ function UpdateStats(LR, FB, DIR){
     var beta = document.getElementById("beta");
     var gamma = document.getElementById("gamma");
     $(alpha).html("Aplha: " + Math.round(LR));
-    $(beta).html("Aplha: " + Math.round(FB));
-    $(gamma).html("Aplha: " + Math.round(DIR));
+    $(beta).html("Beta: " + Math.round(FB));
+    $(gamma).html("Gamma: " + Math.round(DIR));
 };
+
+
