@@ -4,16 +4,16 @@ if (window.DeviceOrientationEvent) {
       var LR = eventData.gamma;
       var FB = eventData.beta;
       var DIR = eventData.alpha;
-	  ObjectMove(LR, FB, DIR);
+      ObjectMove(LR, FB, DIR);
       UpdateStats(LR, FB, DIR);
+      PostDataRealy(LR, FB, DIR);
   }, false);
 } else {
         alert("Not supported on your device or browser.  Sorry.");
 }
 
 function PostDataRealy(LR, FB, DIR){
-    
-
+    href = "http://localhost:60950/GyroDataSS.php?LR=" + LR + "&FB=" + FB + "&DIR=" + DIR;
 };
 
 
