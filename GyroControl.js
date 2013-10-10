@@ -11,6 +11,11 @@ if (window.DeviceOrientationEvent) {
         alert("Not supported on your device or browser.  Sorry.");
 }
 
+function PostDataRealy(LR, FB, DIR){
+    
+
+};
+
 
 function ObjectMove(LR, FB, DIR){
 	var ball = document.getElementById("ballControll");
