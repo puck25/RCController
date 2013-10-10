@@ -1,8 +1,11 @@
 <?php
-echo "<h1>Screen Relay</h1>";
-echo "Alpha:".$_GET['LR']."<BR>";
-echo "Beta:".$_GET['FB']."<BR>";
-echo "Gamma:".$_GET['DIR']."<BR>";
+
+    echo("ALPHA: ".$_POST['ALPHA']);
+    echo("<br>");
+    echo("BETA: ".$_POST['BETA']);
+    echo("<br>");
+    echo("GAMMA: ".$_POST['GAMMA']);
+
 ?>
 
 <!DOCTYPE html>
