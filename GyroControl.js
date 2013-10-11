@@ -31,9 +31,9 @@ function UpdateStats(GAMMA, BETA, ALPHA){
 
 function PHPRelay(ALPHA, BETA, GAMMA){
  $.ajax({
-                    type: "POST",
+                    type: "GET",
                     url: 'GyroDataSS.php',
-                    data: {ALPHA:ALPHA, BETA:BETA, GAMMA:GAMMA},
+                    data: {"alpha":ALPHA, "beta":BETA, "gamma":GAMMA},
                     success: function(data)
                     {
                         console.log("Gyro Data Sent to server");
