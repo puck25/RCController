@@ -1,8 +1,8 @@
 <?php
 $gyro = "gyroData";     
-$alpha = $_GET['gyroData']['ALPHA'];
-$beta = $_GET['gyroData']['BETA'];
-$gamma = $_GET['gyroData']['GAMMA'];
+$alpha = $_POST['alpha'];
+$beta = $_POST['beta'];
+$gamma = $_POST['gamma'];
 
 $file = "RCDATA.json";
 
@@ -17,6 +17,8 @@ echo"<br>";
 echo"Beta Value = ".$beta;
 echo"<br>";
 echo"Gamma Value = ".$gamma;
+echo"<br>";
+echo $_POST;
 
 ?>
 

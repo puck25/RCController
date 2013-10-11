@@ -6,7 +6,8 @@ if (window.DeviceOrientationEvent) {
       var ALPHA = eventData.alpha;
       ObjectMove(GAMMA, BETA, ALPHA);
       UpdateStats(GAMMA, BETA, ALPHA);
-      PHPRelay(ALPHA, BETA, GAMMA);
+//      PHPRelay(ALPHA, BETA, GAMMA);
+        PHPRelay(123, 123, 2354234);
   }, false);
 } else {
         alert("Not supported on your device or browser.  Sorry.");
@@ -30,19 +31,19 @@ function UpdateStats(GAMMA, BETA, ALPHA){
 };
 
 function PHPRelay(ALPHA, BETA, GAMMA){
+    console.log(ALPHA);
     $.ajax({
-        type: "GET",
+        type: "post",
         url: 'GyroDataSS.php',
-        data: {"gyroData":{"alpha":ALPHA,"beta":BETA,"gamma":GAMMA}},
-        contentType: "application/json",
+        data:{"alph":ALPHA,"beta":BETA,"gamma":GAMMA},
                     success: function(data)
                     {
-                        console.log("Gyro Data Sent to server");
+                        console.log(data);
                     },
-                    error: function(error)
+                    error: function(xhr, ajaxOptions, thrownError)
 		    {
 			// Handle error
-		    	console.log(error);
+		    	console.log(xhr.responseText);
 		    }
 
     });
