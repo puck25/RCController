@@ -1,12 +1,12 @@
 <?php
 $gyro = "gyroData";     
-$alpha = $_GET['ALPHA'];
-$beta = $_GET['BETA'];
-$gamma = $_GET['GAMMA'];
+$alpha = $_GET['gyroData']['ALPHA'];
+$beta = $_GET['gyroData']['BETA'];
+$gamma = $_GET['gyroData']['GAMMA'];
 
 $file = "RCDATA.json";
 
-$json = json_decode(file_put_contents($file), true);
+$json = json_decode(file_get_contents($file), true);
 
 $json[$gyro] = array("alpha" => $alpha, "beta" => $beta, "gamma" => $gamma);
 

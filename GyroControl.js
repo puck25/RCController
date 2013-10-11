@@ -30,13 +30,20 @@ function UpdateStats(GAMMA, BETA, ALPHA){
 };
 
 function PHPRelay(ALPHA, BETA, GAMMA){
- $.ajax({
-                    type: "GET",
-                    url: 'GyroDataSS.php',
-                    data: {"alpha":ALPHA, "beta":BETA, "gamma":GAMMA},
+    $.ajax({
+        type: "GET",
+        url: 'GyroDataSS.php',
+        data: {"gyroData":{"alpha":ALPHA,"beta":BETA,"gamma":GAMMA}},
+        contentType: "application/json",
                     success: function(data)
                     {
                         console.log("Gyro Data Sent to server");
-                    }
-                });
+                    },
+                    error: function(error)
+		    {
+			// Handle error
+		    	console.log(error);
+		    }
+
+    });
    } 
