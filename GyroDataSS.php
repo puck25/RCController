@@ -12,13 +12,6 @@ $json[$gyro] = array("alpha" => $alpha, "beta" => $beta, "gamma" => $gamma);
 
 file_put_contents($file, json_encode($json));
 
-echo"Alpha Value = ".$alpha;
-echo"<br>";
-echo"Beta Value = ".$beta;
-echo"<br>";
-echo"Gamma Value = ".$gamma;
-echo"<br>";
-echo $_POST;
 
 ?>
 
