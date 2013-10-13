@@ -1,14 +1,10 @@
-<?php
-$gyro = "gyroData";     
+<?php  
 $alpha = $_POST['alpha'];
 $beta = $_POST['beta'];
 $gamma = $_POST['gamma'];
 
 $file = "RCDATA.json";
-
-$json = json_decode(file_get_contents($file), true);
-
-$json[$gyro] = array("alpha" => $alpha, "beta" => $beta, "gamma" => $gamma);
+$json = array("alpha" => $alpha, "beta" => $beta, "gamma" => $gamma);
 
 file_put_contents($file, json_encode($json));
 
