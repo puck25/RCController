@@ -24,9 +24,10 @@ body {
 }
 
 #StatControlContainer{
-    position: absolute; 
-    top: 80%;
-    margin-left: 50%;
+    overflow: visible;
+    position: fixed; 
+    top: 340px;
+    left: 670px;
 }
 
 .graph{
