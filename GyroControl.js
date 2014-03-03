@@ -4,11 +4,11 @@ var maxbeta = '600'; //left limit
 var multbeta = 10; //factor to multiply the raw gyro figure by to get the desired rande of steering
 
 
-var centergamma = 100;
-var ajustmentgamma = 70; //what do we do to the angle to get to 0 an rest
+var centergamma = -300;
+var ajustmentgamma = 90; //what do we do to the angle to get to 0 an rest
 var mingamma = 250; //backwards limit
 var maxgamma = 400; //forward limit
-var multgamma = 1; //factor to multiply the raw gyro figure by to get the desired rante os accalaration
+var multgamma = 2; //factor to multiply the raw gyro figure by to get the desired rante os accalaration
 
 window.lastbeta='0';
 window.lastgamma='0';
