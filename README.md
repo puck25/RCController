@@ -1,4 +1,4 @@
-RCController
+RCController for Raspberry Pi
 ============
 
 New RC Controller Interface that uses IOS gyroscopes
