@@ -32,3 +32,7 @@ uid=33(www-data) gid=33(www-data) groups=33(www-data),5(tty)
 Voila, the apache user is now permanently in the tty group and has read-write permissions on /dev/ttyAMA0. To undo that:
 
 > sudo usermod -G www-data www-data
+
+Below is a useful link that helped me get CGI scripts enabled from the /var/www directory..
+
+http://stackoverflow.com/questions/19578091/trouble-running-python-script-as-cgi-under-apache-ubuntu-12
