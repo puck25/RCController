@@ -24,4 +24,11 @@ Allow www-data user to to have permission to tty group for servo output to car -
 
 Install all code to /var/www directory...
 
+Add apache to the tty group. This is slightly less safe since it will have access to a bunch of other dev nodes too, but realistically, if you are not serving pages on line, it's the most orthodox, simple, and all round best option.
 
+> sudo usermod -aG tty www-data
+> id www-data
+uid=33(www-data) gid=33(www-data) groups=33(www-data),5(tty)
+Voila, the apache user is now permanently in the tty group and has read-write permissions on /dev/ttyAMA0. To undo that:
+
+> sudo usermod -G www-data www-data
